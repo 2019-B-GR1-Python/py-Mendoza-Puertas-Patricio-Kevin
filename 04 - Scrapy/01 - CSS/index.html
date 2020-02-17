@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        /* ID 
+            # + nombreID
+        */
+        
+        #titulo-uno {
+            background-color: red;
+        }
+        /* Nombre-Etiqueta*/
+        
+        p {
+            color: white;
+            background-color: black;
+        }
+        
+        body {
+            background-color: tomato;
+        }
+        /* Clase
+            . + nombre-clase
+        */
+        
+        .texto-amarillo {
+            color: yellow;
+        }
+        
+        .fondo-verde {
+            background-color: green;
+        }
+        
+        .texto-azul {
+            color: blue;
+        }
+        
+        .texto-cafe {
+            color: brown;
+        }
+        /*Etiqueta dentro de otra*/
+        
+        li>p {
+            background-color: coral;
+            color: darkgray;
+        }
+        
+        li>p.texto-amarillo {
+            color: gold;
+        }
+        
+        p.texto-amarillo.texto-azul.texto-cafe {
+            color: pink !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo-uno">Titulo</h1>
+    <p id="titulo-uno" class="texto-amarillo">Mi mama</p>
+    <p class="texto-amarillo, texto-azul, texto-cafe">me mima</p>
+
+    <ul>
+        <li>
+            <p>Muy</p>
+        </li>
+        <li>
+            <p>Buenos</p>
+        </li>
+        <li>
+            <p class="texto-amarillo">dias</p>
+        </li>
+    </ul>
+
+
+</body>
+
+</html>
