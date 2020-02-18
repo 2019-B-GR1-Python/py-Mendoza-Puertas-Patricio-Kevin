@@ -25,22 +25,26 @@ class AraniaFybeca(scrapy.Spider):
                 item = ProductoFybeca(),
                 selector = producto
                 )
-                # producto_loader.default_output_processor=TakeFirst()
                 
+                # carga nombre
                 producto_loader.add_css(
                     'titulo',
                     'a.name::text'
                 )
 
+                #carga imagen
                 producto_loader.add_xpath(
                     'imagen',
                     'div[contains(@class,"detail")]/a[contains(@class,"image")]/img[contains(@id,"gImg")]/@src'
                 )
 
+                #carga precio normal
                 producto_loader.add_css(
                     'precio_normal',
                     'div.side > div.price::attr(data-bind)'
                 )
+
+                #carga precio con descuento
                 producto_loader.add_css(
                     'precio_descuento',
                     'div.price-member > div::attr(data-bind)'
