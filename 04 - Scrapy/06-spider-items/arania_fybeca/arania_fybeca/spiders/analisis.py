@@ -6,10 +6,8 @@ import nltk
 import seaborn as sns
 
 #path del csv creado
-path_csv = "C:\\Users\\kevme\\Documents\\GitHub\\py-Mendoza-Puertas-Patricio-Kevin\\04 - Scrapy\\06-spider-items\\arania_fybeca\\arania_fybeca\spiders\tmpproductos-fybeca.csv"
+path_csv = "C://Users//kevme//Documents//GitHub//py-Mendoza-Puertas-Patricio-Kevin//04 - Scrapy//06-spider-items//arania_fybeca//arania_fybeca//spiders//tmp//productos-fybeca.csv"
 df = pd.read_csv(path_csv,  encoding = 'unicode_escape',sep = ",")
-df.dropna()
-df.dtypes
 
 # Ahorro por la compre con tarjeta fybeca
 df['ahorro'] = df['precio_normal'] - df['precio_descuento']
