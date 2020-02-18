@@ -5,16 +5,24 @@ import os
 import nltk
 import seaborn as sns
 
+#path del csv creado
 path_csv = "C:\\Users\\kevme\\Documents\\GitHub\\py-Mendoza-Puertas-Patricio-Kevin\\04 - Scrapy\\06-spider-items\\arania_fybeca\\arania_fybeca\spiders\tmpproductos-fybeca.csv"
-data_frame_test = pd.read_csv(path_csv,  encoding = 'unicode_escape',sep = ",")
-data_frame_test.dropna()
-data_frame_test.dtypes
+df = pd.read_csv(path_csv,  encoding = 'unicode_escape',sep = ",")
+df.dropna()
+df.dtypes
 
-data_frame_test['ahorro'] = data_frame_test['precio_normal'] - data_frame_test['precio_descuento']
+# Ahorro por la compre con tarjeta fybeca
+df['ahorro'] = df['precio_normal'] - df['precio_descuento']
 
-ahorro_total = data_frame_test['ahorro'].sum()
-maximo_descuento = data_frame_test['ahorro'].max()
-minimo_descuento = data_frame_test['ahorro'].min()
-print("Precio maximo de descuento:",maximo_descuento)
-print('Precio minimo de descuento:', minimo_descuento)
-print('El ahorro total con tarjeta es de:', ahorro_total)
+ahorroCompra = df['ahorro'].sum()
+descuentoTotal = df['ahorro'].max()
+descuetoMinimo = df['ahorro'].min()
+
+#ver calculo descuento Total
+print("Precio con el descuento maximo : ",descuentoTotal)
+
+#ver calculo descuento minimo
+print('Precio con el descuento minimo : ', descuetoMinimo)
+
+#Ahorro por la compra con tareta
+print('Ahorro por compra con tarjeta : ', ahorroCompra)
