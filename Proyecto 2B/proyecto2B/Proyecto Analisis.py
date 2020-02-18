@@ -71,6 +71,8 @@ df.to_excel('C://Users//kevme//Documents//GitHub//py-Mendoza-Puertas-Patricio-Ke
 ###analiis, usaremos la siguiente linea.
 df.head()
 
+df
+
 ###Para poder observar en una tabla varios ejemplos se lo realiza de la 
 ###siguiente manera; por ejemplo: jugadores de futbol de Argentina
 a=df[df.nationality=='Brazil']
@@ -125,31 +127,31 @@ b
 b.groupby('full_name').mean()["finishing"].plot(kind='bar',stacked=True)
 
 
-###Porcentaje de jugadores por posicion en el campo.
+### Porcentaje de jugadores por posicion en el campo.
 b['positions'].value_counts().head(15).plot(kind = 'pie', cmap = 'Paired', autopct="%0.1f %% ")
 plt.ylabel('')
 
 
-###Potencial de los jugadores de Inglaterra en cuanto a control de balon.
+### Potencial de los jugadores de Inglaterra en cuanto a control de balon.
 c=df[df.nationality=='England']
 c
 c.groupby('full_name').mean()["ball_control"].plot(kind='bar',stacked=True)
 
 
-###Edad de los jugaores de Inglaterra. 
+### Edad de los jugaores de Inglaterra. 
 c.groupby('full_name').mean()["age"].plot(kind='bar',stacked=True)
 
-##Conclusiones
+## Conclusiones
 
-##1) Como se pudo observar en la practica python es una herramienta muy poderosa
-##que nos ayuda en el analisis de datos.
+## 1) Como se pudo observar en la practica python es una herramienta muy poderosa
+## que nos ayuda en el analisis de datos.
 
-##2) Python nos permite separar los datos si un archivo es muy grande de la
-##siguiente manera df = df_pickle.iloc[1:200,:].copy() para que de esta forma
-##sea mas facil el trabajo.
+## 2) Python nos permite separar los datos si un archivo es muy grande de la
+## siguiente manera df = df_pickle.iloc[1:200,:].copy() para que de esta forma
+## sea mas facil el trabajo.
 
-##3) Los graficos que nos ofrece python nos ayuda a visualizar de una manera mas 
-##dinamica los datos que se tengan en los archivos.
+## 3) Los graficos que nos ofrece python nos ayuda a visualizar de una manera mas 
+## dinamica los datos que se tengan en los archivos.
 
 
 
